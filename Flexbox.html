@@ -1,0 +1,61 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Flexbox</title>
+	</head>
+	<body>
+		<style>
+			h1{
+				color: pink;
+				background: gray;
+			}
+			p{
+				color: blue;
+			}
+			h2{
+				color: yellow;
+				background: black;
+			}
+		</style>
+		<h1>Flexbox-summary</h1>
+		<a href="index.html">CSS-Layout-Overview
+		<br>
+		<p>Flexbox is a layout mechanism designed for laying out groups of items in one dimension.It desing pattern can be tricky in responsive desing. It is a sidebar that sits inline with some content.viewport space works well to the desinged,but where space is condensed, that rigid layout can become problematic.</p>
+		<h2>The use of a flex layout?</h2>
+		<p>Flex layouts have the following features, which you will be able to explore in this guide.</p>
+		<p>It can display as a row,or a column.It respect the writing mode of the document.They are single line by default, but can be asked to wrap onto multiple lines.It can be visually reordered, away from their order in the DOM Arround the items and flex lines in a wrapped layout space csn be distributed.</p>
+		<h2>Main and Cross axis</h2>
+        <p>In understanding flexbox you should understand the concept of the main and cross axis.The main axis is the one set by your flex-direction property,while the cross axis run the other direction to the main axis,so if flex-directionis row the cross axis runs along the column. two things on the cross axis. You can move the items individually or as a group, so they align against each other and the flex container. Also, if you have wrapped flex lines, you can treat those lines as a group to control how space is assigned to those lines. You will see how this all works in practice throughout this guide, for now just keep in mind that the main axis follows your flex-direction.</p>
+        <img src="https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/5wCsZcBmK5L33LS7nOmP.svg">
+        <h2>Creating a flex container </h2>
+        <p> flexbox behaves by taking a group of different sized items and using flexbox to lay them out.</p>
+        <h2>Controlling the direction of items </h2>
+        <p>Create the direction, add the property and one of the four values:column-reverse : the items lay out as a column from the end of the flex container.column: the items lay out as a column.row-reverse: the items lay out as a row from the end of the flex container.row: the items lay out as a row.</p>
+        <h2>Reversing the flow of items and accessibility</h2>
+        <p>There should be properties that reorder the visual display away from how things are ordered in the HTML document, as it can negatively impact accessibility.The reordering should include testing to check that it will not make your site hard to use for some people.</p>
+        <h2>How modes and direction are written</h2>
+        <p>Row runs in the direction that sentences flow in your writing mode and script direction.It means if you are working in Arabic , which has a right-to-left (rtl) script direction, the items will line up on the right. Writing mode like some Japanese typefaces, then a row will run vertically, from top to bottom. Most tutorials are written using English, or another horizontal, left to right writing mode. This would make it easy to assume that flex items line up on the left, and run horizontally.</p>
+        <h2>Wrapping flex items</h2>
+        <p>flex-wrap property is nowrap which is it initial value.When a flex container wraps it creates multiple flex lines.Therefore if you are wrapping rows, it is not possible to get something in row 2 to line up with something above it in row</p> 
+        <h2>The flex-flow shorthand </h2>   
+        <p>flex-direction and flex-wrap properties can be set using the shorthand flex-flow. </p>
+        <h2>Controlling space inside flex items</h2>
+        <p>To cause the items to grow, while allowing large items to have more space than small ones use flex:auto. Using flex: auto will mean that items end up different sizes, as the space that is shared between the items is shared out after each item is laid out as max-content size. So a large item will gain more space. To force all of the items to be a consistent size and ignore the size of the content change flex:auto to flex: 1 in the demo.</p>
+        <h2>Allowing items to grow at different rates</h2>
+        <p> flex-basis of auto can be applied ,though you will need to specify the three values. The first value being flex-grow, the second flex-shrink, and the third flex-basis. </p>
+        <h2>Reordering flex items</h2>
+        <p>There can be reordered of item in the flex container  using the order property.property allows the ordering of items in ordinal groups. Items are laid out in the direction dictated by flex-direction, lowest values first. If more than one item has the same value it will be displayed with the other items with that value.</p>
+        <h2>Flexbox alignment overview</h2>
+        <p> properties for aligning items and distributing space between items.The set of properties can be placed into two groups. Properties for space distribution, and properties for alignment.If you are working on the main axis then the properties begin with justify-. On the cross axis they begin with align-. </p>
+        <h2>Distributing space on the main axis</h2>
+        <p>Add the justify-content property to the flex container, give it a value of flex-end, and the items line up at the end of the container and the spare space is placed at the start.</p>
+        <h2>Distributing space between flex lines </h2>
+        <p> Add the property align-content to the flex container to change that default behavior.</p>
+        <h2>The place-content shorthand</h2>
+        <p>justify-content and align-content you can use place-content with one or two values.  A single value will be used for both axes, if you specify both the first is used for align-content and the second for justify-content.</p>
+        <h2>How to center an item vertically and horizontally</h2>
+        <p>The justify-content property aligns the item on the main axis, which is row. The align-items property on the cross axis</p>
+        <h2>Grid</h2>
+        <p>CSS Grid layout provides atwo dimensional layout system, controlling layout in rows and colums.</p>
+	</body>
+</html>
